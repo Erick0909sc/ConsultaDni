@@ -89,13 +89,13 @@ const Index = () => {
             <img
               className="w-24 h-24 mb-3 mt-6 rounded-full shadow-lg"
               src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png"
-              alt={datos.nombres}
+              alt={datos.data.nombres}
             />
             <h5 className="mb-1 text-xl font-medium text-gray-900 dark:text-white">
-              {datos.nombres}
+              {datos.data.nombres}
             </h5>
             <span className="text-sm text-gray-500 dark:text-gray-400">
-              {datos.apellidoPaterno} {datos.apellidoMaterno}
+            {datos.data.apellido_paterno} {datos.data.apellido_materno}
             </span>
           </div>
         </div>

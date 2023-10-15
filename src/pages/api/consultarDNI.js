@@ -4,11 +4,12 @@ export default async function handler(req, res) {
       const { dni } = req.query;
   
       try {
-        const apiUrl = `https://dniruc.apisperu.com/api/v1/dni/${dni}?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6ImVyaWNraW5nYWNhbGxlQGdtYWlsLmNvbSJ9.IfKDPqcc5dldHHx6w3KcrQ5Y6aET0jUSBe2Psh0XwRQ`;
+        const apiUrl = `https://apiperu.dev/api/dni/${dni}?api_token=61d39010845bf358b28179b2546c99d020acac673a070ab9fb24a2d525759305`;
         const response = await fetch(apiUrl);
         const data = await response.json();
   
         if (data.success) {
+          console.log (data)
           res.status(200).json(data);
         } else {
           res.status(404).json({ success: false, message: 'No se encontraron datos para el número de DNI ingresado.' });
